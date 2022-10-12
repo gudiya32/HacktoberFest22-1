@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while (t--)
+    { 
+        int n,c,x,y,i=1,l;
+        cin>>c;
+        cin>>n;
+        x=(n*(n+1))/2;
+        if(x>c)
+        {
+            cout<<c<<endl;
+        }
+        else
+     {
+           y=(2*c-n*(n-1))/2;
+           i=y/n;
+           l=n*i+n*(n-1)/2;
+           cout<<c-l<<endl;
+     }
+    }
+ 
+}
