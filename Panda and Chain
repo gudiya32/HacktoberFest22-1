@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+#define mod 1000003
+int main()
+{
+    int t;
+    ll arr[1000004];
+    arr[0] = 1;
+    for(int i = 1 ; i < 1000004; i++)
+    {
+        arr[i] = (arr[i - 1] * i) % mod;
+    }
+    cin>>t;
+    
+    while( t--)
+    {
+        ll n,x;
+        cin >> n >> x;
+        ll ans; 
+        if(n >= 1000003)
+        cout << "0" << endl;
+        else
+        {
+        ans=((arr[n] % mod) * (x % mod)) % mod;
+        cout << ans << endl;
+        }
+    }
+    return 0;
+}
